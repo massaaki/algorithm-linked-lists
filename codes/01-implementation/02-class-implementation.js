@@ -85,6 +85,23 @@ class LinkedList {
     return this;
   }
 
+
+  remove (index) {
+    if (index == 0) {
+      this.head = this.head.next
+    } else if (index == this.length - 1) {
+      const lasPos = this.length - 1
+      const lastUpdatedLastNode = this.traverseToIndex(lasPos - 1);
+      lastUpdatedLastNode.next = null;
+    } else {
+      const leaderNode = this.traverseToIndex(index - 1);
+      const nodeToRemove = leaderNode.next;
+
+      leaderNode.next = nodeToRemove.next;
+    }
+    this.length--;
+  }
+
 }
 
 
@@ -98,8 +115,9 @@ myLinkedList.append(4);
 // myLinkedList.prepend(32);
 // myLinkedList.prepend(2);
 
-myLinkedList.insert(2, 10);
-myLinkedList.insert(4, 20);
-myLinkedList.insert(2, 30);
+// myLinkedList.insert(2, 10);
+// myLinkedList.insert(4, 20);
+// myLinkedList.insert(2, 30);
+myLinkedList.remove(0);
 
 myLinkedList.printList();
