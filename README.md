@@ -21,6 +21,7 @@
 </ul>
 
 <h2>Performance in worst case</h2>
+<p>Fast insertion, fast deletion, ordered, flexible size, but It's slow to lookup and consumes more memory</p>
 <ul>
   <li>O(n): Insert</li>
   <li>O(n): Delete </li>
