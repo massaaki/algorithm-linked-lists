@@ -90,6 +90,27 @@ class DoublyLinkedList {
     this.length--;
   }
 
+  reverse () {
+    if (!this.head.next) {
+      return this.head;
+    }
+
+    let first = this.head;
+    this.tail = this.head;
+    let second = first.next;
+
+    while (second) {
+      const temp = second.next;
+      second.next = first;
+      first = second;
+      second = temp;
+    }
+
+    this.head.next = null;
+    this.head = first;
+
+  }
+
 
   printList () {
     const array = [];
@@ -131,5 +152,6 @@ myLinkedList.append(4);
 
 // myLinkedList.insert(5, 99);
 // myLinkedList.remove(4)
+myLinkedList.reverse();
 myLinkedList.printList();
 // myLinkedList.printReverseList()
