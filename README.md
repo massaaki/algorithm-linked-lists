@@ -1,7 +1,10 @@
 <h1>Linked Lists</h1>
 <p>A list linked in sequence, and each item(node) has 2 informations: The <strong>value</strong> and the <strong>pointer to next element</strong>.</p>
 
+<h2>Simple linked lists</h2>
 <img src="./images/linked-lists-01.png"/>
+<h2>Doubly linked lists</h2>
+<img src="./images/doubly-linked-lists.png" />
 
 <h2>Nice references</h2>
 <ul>
